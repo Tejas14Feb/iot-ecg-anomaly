@@ -7,8 +7,8 @@
 
 This project builds a machine learning pipeline to detect cardiac anomalies in ECG signals from wearable IoT devices. We compare two approaches:
 
-- **LSTM Autoencoder** (primary model) - learns what normal ECG looks like, flags high reconstruction error as anomalous
-- **Isolation Forest** (baseline) - classical unsupervised anomaly detection using statistical features
+- **LSTM Autoencoder** (primary model): learns what normal ECG looks like, flags high reconstruction error as anomalous
+- **Isolation Forest** (baseline): classical unsupervised anomaly detection using statistical features
 
 Dataset: PTB-XL (public ECG dataset, 21,799 records from 18,869 patients)
 
@@ -24,40 +24,40 @@ pip install -r requirements.txt
 
 ## How to Run (in order)
 
-### Step 1 — Download data
+### Step 1: Download data
 ```bash
 python step1_download_data.py
 ```
 Downloads 500 ECG records from PTB-XL and saves them locally.
 Takes a few minutes depending on internet speed.
 
-### Step 2 — Train Isolation Forest baseline
+### Step 2: Train Isolation Forest baseline
 ```bash
 python step2_isolation_forest.py
 ```
 Extracts statistical features (mean, std, min, max) and trains the baseline model.
 Prints and saves Precision, Recall, F1, ROC-AUC.
 
-### Step 3 — Train LSTM Autoencoder
+### Step 3: Train LSTM Autoencoder
 ```bash
 python step3_lstm_autoencoder.py
 ```
 Trains the LSTM autoencoder on normal ECG signals only.
 Saves the model and test results.
 
-### Step 4 — Threshold sensitivity experiment
+### Step 4: Threshold sensitivity experiment
 ```bash
 python step4_threshold_experiment.py
 ```
 Tests three thresholds (mean + 1σ, 2σ, 3σ) and shows the Precision-Recall tradeoff.
 
-### Step 5 — IoT latency simulation
+### Step 5: IoT latency simulation
 ```bash
 python step5_latency_simulation.py
 ```
 Measures inference time per ECG window to check if deployment on wearables is feasible.
 
-### Step 6 — Generate all charts
+### Step 6: Generate all charts
 ```bash
 python step6_generate_charts.py
 ```
