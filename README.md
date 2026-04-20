@@ -7,8 +7,8 @@
 
 This project builds a machine learning pipeline to detect cardiac anomalies in ECG signals from wearable IoT devices. We compare two approaches:
 
-- **LSTM Autoencoder** (primary model) — learns what normal ECG looks like, flags high reconstruction error as anomalous
-- **Isolation Forest** (baseline) — classical unsupervised anomaly detection using statistical features
+- **LSTM Autoencoder** (primary model) - learns what normal ECG looks like, flags high reconstruction error as anomalous
+- **Isolation Forest** (baseline) - classical unsupervised anomaly detection using statistical features
 
 Dataset: PTB-XL (public ECG dataset, 21,799 records from 18,869 patients)
 
