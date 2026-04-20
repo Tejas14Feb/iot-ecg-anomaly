@@ -1,5 +1,5 @@
 # ML-Driven Anomaly Detection in Wearable IoT Health Monitoring
-**Tejas Budharamu — CSC 444 Internet of Things — University of South Dakota**
+**Tejas Budharamu • CSC 444 Internet of Things • University of South Dakota**
 
 ---
 
